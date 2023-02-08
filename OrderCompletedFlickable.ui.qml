@@ -7,6 +7,12 @@ Flickable {
 	property alias orderCompletedButton: button
 	contentHeight: body.height
 
+	FontLoader {
+		id: jost
+		name: "Jost"
+		source: "Jost/Jost-Regular.ttf"
+	}
+
 	ColumnLayout {
 		id: body
 		anchors {
@@ -24,7 +30,10 @@ Flickable {
 			Label {
 				text: qsTr("Your Order is Completed!")
 				font.pixelSize: 30
-				Layout.alignment: Qt.AlignHCenter
+				font.family: jost.name
+				wrapMode: Text.Wrap
+				horizontalAlignment: Text.AlignHCenter
+				Layout.fillWidth: true
 				Layout.bottomMargin: 20
 			}
 
@@ -34,10 +43,10 @@ Flickable {
 					+ "completed. Your order details are "
 					+ "shown for your personal account.")
 				font.pixelSize: 16
+				font.family: jost.name
 				wrapMode: Text.Wrap
 				horizontalAlignment: Text.AlignHCenter
 				Layout.fillWidth: true
-				Layout.alignment: Qt.AlignHCenter
 				Layout.bottomMargin: 32
 			}
 
@@ -45,6 +54,7 @@ Flickable {
 				id: button
 				text: qsTr("View My Orders")
 				font.pixelSize: 16
+				font.family: jost.name
 				Layout.alignment: Qt.AlignHCenter
 			}
 		}
