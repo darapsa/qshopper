@@ -3,7 +3,7 @@ import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 
 Flickable {
-	property string orderCompletedText: "673290789"
+	property alias orderCompletedText: text
 	property alias orderCompletedButton: button
 	contentHeight: body.height
 
@@ -29,9 +29,10 @@ Flickable {
 			}
 
 			Label {
-				text: qsTr("Your order ") + orderCompletedText
-				+ qsTr(" has been completed. Your order details"
-				+ " are shown for your personal account.")
+				id: text
+				text: qsTr("Your order 673290789 has been "
+					+ "completed. Your order details are "
+					+ "shown for your personal account.")
 				font.pixelSize: 16
 				wrapMode: Text.Wrap
 				horizontalAlignment: Text.AlignHCenter
