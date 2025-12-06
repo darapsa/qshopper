@@ -9,7 +9,6 @@ Flickable {
 
 	FontLoader {
 		id: jost
-		name: "Jost"
 		source: "Jost/Jost-Regular.ttf"
 	}
 
@@ -30,7 +29,7 @@ Flickable {
 			Label {
 				text: qsTr("Your Order is Completed!")
 				font.pixelSize: 30
-				font.family: jost.name
+				font.family: jost.font.family
 				wrapMode: Text.Wrap
 				horizontalAlignment: Text.AlignHCenter
 				Layout.fillWidth: true
@@ -43,7 +42,7 @@ Flickable {
 					+ "completed. Your order details are "
 					+ "shown for your personal account.")
 				font.pixelSize: 16
-				font.family: jost.name
+				font.family: jost.font.family
 				wrapMode: Text.Wrap
 				horizontalAlignment: Text.AlignHCenter
 				Layout.fillWidth: true
@@ -54,7 +53,7 @@ Flickable {
 				id: button
 				text: qsTr("View My Orders")
 				font.pixelSize: 16
-				font.family: jost.name
+				font.family: jost.font.family
 				Layout.alignment: Qt.AlignHCenter
 			}
 		}
